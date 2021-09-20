@@ -4,9 +4,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      fontFamily: {
-        Almarai: ["Almarai, sans-serif"],
+      colors: {
+        primary: "#3399cc",
       },
+    },
+    fontFamily: {
+      Almarai: ["Almarai, sans-serif"],
     },
     container: {
       center: true,
