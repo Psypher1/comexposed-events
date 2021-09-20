@@ -4,8 +4,8 @@ import Header from "../components/layout/Header";
 export default function Home() {
   return (
     <>
-      <Header />
-      <div className="container mt-8">
+      {/* <Header /> */}
+      <div className="mt-8">
         <h1 className="text-4xl text-center font-semibold">
           Comexposed Events
         </h1>
