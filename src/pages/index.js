@@ -37,6 +37,7 @@ export default function Home() {
   return (
     <>
       {/* <Header /> */}
+      <h1 className="text-3xl sm:text-4xl md:text-5xl text-purple-800 text-center font-semibold mb-4">Comexposed Events</h1>
       <EventList events={DUMMY_EVENTS} />
       {/* <Card>
         <h1 className="text-4xl text-center font-semibold">
