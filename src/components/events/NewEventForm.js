@@ -26,33 +26,35 @@ export default function NewEventForm() {
   }
 
   return (
-    <Card>
-      <form className="" onSubmit={submitHandler}>
-        <div className="">
-          <label htmlFor="title">Meetup Title</label>
-          <input type="text" required id="title" ref={titleInputRef} />
-        </div>
-        <div className="">
-          <label htmlFor="image">Meetup Image</label>
-          <input type="url" required id="image" ref={imageInputRef} />
-        </div>
-        <div className="">
-          <label htmlFor="address">Address</label>
-          <input type="text" required id="address" ref={addressInputRef} />
-        </div>
-        <div className="">
-          <label htmlFor="description">Description</label>
-          <textarea
-            id="description"
-            required
-            rows="5"
-            ref={descriptionInputRef}
-          ></textarea>
-        </div>
-        <div className="">
-          <button>Add Meetup</button>
-        </div>
-      </form>
-    </Card>
+    <div className="max-w-xl mx-auto">
+      <Card>
+        <form className="p-4" onSubmit={submitHandler}>
+          <div className="">
+            <label htmlFor="title">Meetup Title</label>
+            <input type="text" required id="title" ref={titleInputRef} />
+          </div>
+          <div className="">
+            <label htmlFor="image">Meetup Image</label>
+            <input type="url" required id="image" ref={imageInputRef} />
+          </div>
+          <div className="">
+            <label htmlFor="address">Address</label>
+            <input type="text" required id="address" ref={addressInputRef} />
+          </div>
+          <div className="">
+            <label htmlFor="description">Description</label>
+            <textarea
+              id="description"
+              required
+              rows="5"
+              ref={descriptionInputRef}
+            ></textarea>
+          </div>
+          <div className="">
+            <button className="hover:bg-purple-800 hover:text-purple-100 bg-purple-200 text-purple-900 transition-colors duration-500 ease-in-out py-2 px-3 rounded-md">Add Meetup</button>
+          </div>
+        </form>
+      </Card>
+    </div>
   );
 }
