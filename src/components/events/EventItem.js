@@ -2,19 +2,21 @@ import Card from "../ui/Card";
 
 export default function EventItem({ image, title, address, description }) {
   return (
-    <li>
-      <Card>
-        <div className="">
-          <img src={image} alt={title} />
+    
+ <div className="mx-4">
+        <Card>
+        <div className="mb-4">
+          <img className="rounded-lg " src={image} alt={title} />
+        </div>
+        <div className="mb-2">
+          <h3 className='text-xl text-purple-900 font-medium'>{title}</h3>
+          <address className='font-thin text-gray-600'>{address}</address>
         </div>
         <div className="">
-          <h3>{title}</h3>
-          <address>{address}</address>
-        </div>
-        <div className="">
-          <button>Show Details</button>
+          <button className='hover:bg-purple-800 hover:text-purple-100 bg-purple-100 text-purple-900 transition duration-400 ease py-2 px-3 rounded-md'>Show Details</button>
         </div>
       </Card>
-    </li>
+ </div>
+    
   );
 }

@@ -5,9 +5,9 @@ import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="font-Almarai  ">
+    <div className="font-Almarai bg-gray-300 ">
       <Header />
-      <div className="container">
+      <div className="container ">
         <Component {...pageProps} />
       </div>
     </div>
