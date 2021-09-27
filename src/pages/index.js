@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Header from "../components/layout/Header";
-import Card from "../components/ui/Card";
+import { useEffect, useState } from "react";
+
 import EventList from "../components/events/EventList";
 
 const DUMMY_EVENTS = [
@@ -8,7 +8,7 @@ const DUMMY_EVENTS = [
     id: "m1",
     title: "This is a first meetup",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg",
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     location: "Meetupstreet 5, 12345 Meetup City",
     description:
       "This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!",
@@ -34,6 +34,23 @@ const DUMMY_EVENTS = [
 ];
 
 export default function Home() {
+  const [loadedEvents, setLoadedEvents] = useState();
+
+  useEffect(() => {
+    // send http request fetch data
+    setLoadedEvents(DUMMY_EVENTS);
+  }, []);
+  // useEffect(() => {
+  //   // send http request fetch data
+  //   return () => {
+  //     cleanup;
+  //   };
+  // }, [input])(() => {
+  //   effect;
+  //   return () => {
+  //     cleanup;
+  //   };
+  // }, [input]);
   return (
     <>
       {/* <Header /> */}
