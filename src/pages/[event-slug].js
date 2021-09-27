@@ -1,7 +1,8 @@
-export default function EventDetail() {
-  return (
-    <div>
-      <h2 className="tex-3xl">All About It</h2>
-    </div>
-  );
+import Image from "next/image";
+import Card from "../components/ui/Card";
+
+import EventDetail from "../components/events/EventDetail";
+
+export default function Event() {
+  return <EventDetail />;
 }

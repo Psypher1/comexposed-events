@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 export default function Header() {
+  const links = [];
   return (
-    <header className="sticky top-0 bg-purple-900 text-gray-300 mb-6 lg:mb-12">
+    <header className="sticky z-30 top-0 bg-purple-900 text-gray-300 mb-10 lg:mb-12">
       <nav className="container flex flex-col sm:flex-row items-center justify-center  py-3 ">
         <div className=" flex-1">
           <Link href="/">
