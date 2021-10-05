@@ -31,27 +31,6 @@ export default function Header() {
               </Link>
             </li>
           ))}
-          {/* <li>
-            <Link href="/">
-              <a className="transition duration-400 ease-in-out hover:text-gray-100 ">
-                All Events
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/new-event">
-              <a className="transition duration-400 ease-in-out hover:text-gray-100 ">
-                New Event
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/favourites">
-              <a className="transition duration-400 ease-in-out hover:text-gray-100 ">
-                Favourites
-              </a>
-            </Link>
-          </li> */}
         </ul>
       </nav>
     </header>

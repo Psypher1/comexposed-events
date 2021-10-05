@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
 
 import EventList from "../components/events/EventList";
 
@@ -33,113 +32,43 @@ const DUMMY_EVENTS = [
   },
 ];
 
-export default function Home() {
-  const [loadedEvents, setLoadedEvents] = useState();
-
-  useEffect(() => {
-    // send http request fetch data
-    setLoadedEvents(DUMMY_EVENTS);
-  }, []);
-  // useEffect(() => {
-  //   // send http request fetch data
-  //   return () => {
-  //     cleanup;
-  //   };
-  // }, [input])(() => {
-  //   effect;
-  //   return () => {
-  //     cleanup;
-  //   };
-  // }, [input]);
+export default function Home({ events }) {
   return (
     <>
+      <Head>
+        <title>Comexposed Events</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {/* <Header /> */}
       <h1 className="text-3xl sm:text-4xl md:text-5xl text-purple-800 text-center font-semibold mb-4">
         Comexposed Events
       </h1>
-      <EventList events={DUMMY_EVENTS} />
-      {/* <Card>
-        <h1 className="text-4xl text-center font-semibold">
-          Comexposed Events
-        </h1>
-      </Card> */}
-
-      {/* <div className="flex flex-col items-center justify-center min-h-screen py-2">
-        <Head>
-          <title>Comexposed Events</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-
-        <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-          <h1 className="text-6xl font-bold">
-            Welcome to{" "}
-            <a className="text-blue-600" href="https://nextjs.org">
-              Next.js!
-            </a>
-          </h1>
-
-          <p className="mt-3 text-2xl">
-            Get started by editing{" "}
-            <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-              pages/index.js
-            </code>
-          </p>
-
-          <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-            <a
-              href="https://nextjs.org/docs"
-              className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-            >
-              <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-              <p className="mt-4 text-xl">
-                Find in-depth information about Next.js features and API.
-              </p>
-            </a>
-
-            <a
-              href="https://nextjs.org/learn"
-              className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-            >
-              <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-              <p className="mt-4 text-xl">
-                Learn about Next.js in an interactive course with quizzes!
-              </p>
-            </a>
-
-            <a
-              href="https://github.com/vercel/next.js/tree/master/examples"
-              className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-            >
-              <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-              <p className="mt-4 text-xl">
-                Discover and deploy boilerplate example Next.js projects.
-              </p>
-            </a>
-
-            <a
-              href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-            >
-              <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-              <p className="mt-4 text-xl">
-                Instantly deploy your Next.js site to a public URL with Vercel.
-              </p>
-            </a>
-          </div>
-        </main>
-
-        <footer className="flex items-center justify-center w-full h-24 border-t">
-          <a
-            className="flex items-center justify-center"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by{" "}
-            <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-          </a>
-        </footer>
-      </div> */}
+      <EventList events={events} />
     </>
   );
 }
+// fetch data for pre rendering
+export async function getStaticProps() {
+  // fetch data from \npmapi/database or file system
+
+  return {
+    props: {
+      events: DUMMY_EVENTS,
+    },
+    // if data changes frequently - increamental static gen
+    // revalidate: 20,
+  };
+}
+
+// will always run on server, never on client
+// export async function getServerSideProps(context) {
+//   // fetch data from API
+//   const req = context.req;
+//   const res = context.res;
+
+//   return {
+//     props: {
+//       events: DUMMY_EVENTS,
+//     },
+//   };
+// }

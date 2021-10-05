@@ -1,9 +1,9 @@
 import EventItem from "./EventItem";
 
-export default function EventList(props) {
+export default function EventList({ events }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-      {props.events.map((event) => (
+      {events.map((event) => (
         <EventItem
           key={event.id}
           id={event.id}
