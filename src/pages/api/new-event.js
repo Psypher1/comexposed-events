@@ -2,7 +2,7 @@
 import { MongoClient } from "mongodb";
 // /api/new-event
 
-function handler(req, res, next) {
+async function handler(req, res, next) {
   if (req.method === "POST") {
     const data = req.body;
 
@@ -20,6 +20,10 @@ function handler(req, res, next) {
     const result = await comexposedCollection.insertOne(data);
 
     console.log(result);
+
+    client.close();
+    // 201 - something was added
+    res.status(201).json({ message: "Event inserted" });
   }
 }
 

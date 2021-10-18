@@ -1,8 +1,22 @@
+import { useRouter } from "next/router";
 import NewEventForm from "../components/events/NewEventForm";
 
 export default function New() {
-  function handleAddEvent(eventData) {
+  const router = useRouter();
+  async function handleAddEvent(eventData) {
     console.log(eventData);
+    // sent to internal api
+    const response = await fetch("/api/new-event", {
+      method: "POST",
+      body: JSON.stringify(eventData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await response.json();
+    console.log(data);
+
+    router.push("/");
   }
 
   return (
