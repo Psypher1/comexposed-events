@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function EventDetail({ title, image, location, description }) {
   return (
-    <div className="max-w-2xl text-center mb-8 p-16 mx-auto">
+    <div className="max-w-2xl text-center mb-8 p-6 mx-auto">
       <Card>
         <Image
           width={600}
-          height={400}
+          height={350}
           src={image}
-          className="rounded-md "
+          className="rounded-md"
           alt=""
         />
         <div className="text-left ml-2  mt-4">

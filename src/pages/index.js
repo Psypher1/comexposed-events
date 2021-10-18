@@ -5,30 +5,30 @@ import EventList from "../components/events/EventList";
 const DUMMY_EVENTS = [
   {
     id: "m1",
-    title: "This is a first meetup",
+    title: "This is a 1st meetup",
     image:
       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     location: "Meetupstreet 5, 12345 Meetup City",
     description:
-      "This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!",
+      "This is a 1st, amazing meetup which you definitely should not miss. It will be a lot of fun!",
   },
   {
     id: "m2",
-    title: "This is a second meetup",
+    title: "This is a 2nd meetup",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg",
     location: "Meetupstreet 5, 12345 Meetup City",
     description:
-      "This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!",
+      "This is a 2nd, amazing meetup which you definitely should not miss. It will be a lot of fun!",
   },
   {
     id: "m3",
-    title: "This is a third meetup",
+    title: "This is a 3rd meetup",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg",
     location: "Meetupstreet 5, 12345 Meetup City",
     description:
-      "This is a third, amazing meetup which you definitely should not miss. It will be a lot of fun!",
+      "This is a 3rd, amazing meetup which you definitely should not miss. It will be a lot of fun!",
   },
 ];
 
