@@ -8,7 +8,10 @@ export default function Home({ events }) {
     <>
       <Head>
         <title>Comexposed Events</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="A list of events hosted by Converge Comexposed"
+        />
       </Head>
       {/* <Header /> */}
       <h1 className="text-3xl sm:text-4xl md:text-5xl text-purple-800 text-center font-semibold mb-4">

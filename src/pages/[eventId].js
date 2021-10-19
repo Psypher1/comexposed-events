@@ -1,17 +1,22 @@
-import Image from "next/image";
-import Card from "../components/ui/Card";
+import Head from "next/head";
 
 import EventDetail from "../components/events/EventDetail";
 import { MongoClient, ObjectId } from "mongodb";
 
 export default function Event({ eventData }) {
   return (
-    <EventDetail
-      title={eventData.title}
-      image={eventData.image}
-      location={eventData.location}
-      description={eventData.description}
-    />
+    <>
+      <Head>
+        <title>{eventData.title}</title>
+        <meta name="description" content={eventData.description} />
+      </Head>
+      <EventDetail
+        title={eventData.title}
+        image={eventData.image}
+        location={eventData.location}
+        description={eventData.description}
+      />
+    </>
   );
 }
 

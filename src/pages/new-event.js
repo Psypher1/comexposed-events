@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import NewEventForm from "../components/events/NewEventForm";
 
@@ -21,6 +22,13 @@ export default function New() {
 
   return (
     <div>
+      <Head>
+        <title>Comexposed Events | Add Event</title>
+        <meta
+          name="description"
+          content="A list of events hosted by Converge Comexposed"
+        />
+      </Head>
       <h1 className="text-2xl sm:text-3xl md:text-4xl text-purple-800 text-center font-semibold mb-4">
         Add An Event
       </h1>
