@@ -9,7 +9,7 @@ export default function EventList({ events }) {
           id={event.id}
           image={event.image}
           title={event.title}
-          address={event.address}
+          location={event.location}
         />
       ))}
     </div>

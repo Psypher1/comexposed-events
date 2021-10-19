@@ -4,7 +4,7 @@ import NewEventForm from "../components/events/NewEventForm";
 export default function New() {
   const router = useRouter();
   async function handleAddEvent(eventData) {
-    console.log(eventData);
+    // console.log(eventData);
     // sent to internal api
     const response = await fetch("/api/new-event", {
       method: "POST",
