@@ -9,9 +9,7 @@ async function handler(req, res, next) {
     // const { title, image, location, description } = data;
 
     // connect to mongodb
-    const client = await MongoClient.connect(
-      "mongodb+srv://dante:p3rf3ct3wgf@cluster0.hb47j.mongodb.net/comexposed?retryWrites=true&w=majority"
-    );
+    const client = await MongoClient.connect(process.env.MONGO_URI);
     //get hold of database
     const db = client.db();
     // get hold of the collection
